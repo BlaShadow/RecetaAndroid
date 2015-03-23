@@ -5,12 +5,80 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chefBtn"
+            android:src="@mipmap/chef_hat"
+            android:layout_below="@+id/recipeBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="#ffeeeeee"
+            android:paddingEnd="@dimen/abc_button_inset_vertical_material"
+            android:padding="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipeBtn"
+            android:src="@mipmap/pizza"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="#ffeeeeee"
+            android:paddingEnd="@dimen/abc_button_inset_vertical_material"
+            android:padding="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelBtn"
+            android:src="@android:drawable/ic_delete"
+            android:layout_alignLeft="@+id/recipeBtn"
+            android:layout_alignStart="@+id/recipeBtn"
+            android:layout_alignRight="@+id/recipeBtn"
+            android:layout_alignEnd="@+id/recipeBtn"
+            android:layout_below="@+id/chefBtn"
+            android:layout_alignParentBottom="true"
+            android:background="#ffeeeeee" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listBtn"
+            android:src="@mipmap/list"
+            android:layout_above="@+id/recipeBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="#ffeeeeee"
+            android:paddingEnd="@dimen/abc_button_inset_vertical_material"
+            android:padding="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
+
+    </RelativeLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
+        android:text="@string/main_menu"
         android:id="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_action_bar_progress_bar_size"
+        android:textAlignment="center"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignEnd="@+id/relativeLayout"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

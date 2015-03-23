@@ -5,12 +5,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private final static int SPLASH_TIMEOUT = 3000;
+
+    private ImageButton listBtn = null;
+    private ImageButton chefBtn = null;
+    private ImageButton recipeBtn = null;
+    private ImageButton cancelBtn = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +36,7 @@ public class MainActivity extends ActionBarActivity {
             public void onFinish() {
                 //Se llama al final del ciclo la función que cambia al view del main
                 setContentView(R.layout.activity_main);
+                initializeButtons();
             }
 
             public void onTick(long millisUntilFinished) {
@@ -37,6 +46,58 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    private void initializeButtons(){
+        /*
+        *   Método utilizado para inicializar los botones
+         */
+        this.listBtn = (ImageButton)findViewById(R.id.listBtn);
+        this.recipeBtn = (ImageButton)findViewById(R.id.recipeBtn);
+        this.chefBtn = (ImageButton)findViewById(R.id.chefBtn);
+        this.cancelBtn = (ImageButton)findViewById(R.id.cancelBtn);
+
+        /* Listener de los botones*/
+        this.listBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this.getBaseContext(),
+                                "Showing list...",Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
+
+        this.recipeBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this.getBaseContext(),
+                                "Adding new recipe...",Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
+
+        this.chefBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this.getBaseContext(),
+                                "Adding new chef...",Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
+
+        this.cancelBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //Bad ending?
+                        System.exit(0);
+                    }
+                }
+        );
+
+        /* Fin listener de botones */
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
