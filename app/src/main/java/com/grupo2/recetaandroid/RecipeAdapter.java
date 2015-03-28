@@ -41,8 +41,8 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
         Log.i("Recipe Adapter", item.getUrlImage());
 
         Picasso.with(context)
-                .load("http://flag.jpg.to/")
-                .placeholder(R.drawable.abc_ab_share_pack_holo_dark)
+                .load(item.getUrlImage())
+                .placeholder(R.mipmap.ic_launcher)
                 .resize(50, 50)
                 .centerCrop()
                 .into(image);

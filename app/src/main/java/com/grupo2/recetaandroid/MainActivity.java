@@ -1,5 +1,6 @@
 package com.grupo2.recetaandroid;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -61,6 +62,7 @@ public class MainActivity extends ActionBarActivity {
                     public void onClick(View v) {
                         Toast.makeText(MainActivity.this.getBaseContext(),
                                 "Showing list...",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this,ShowDataActivity.class));
                     }
                 }
         );
@@ -71,6 +73,7 @@ public class MainActivity extends ActionBarActivity {
                     public void onClick(View v) {
                         Toast.makeText(MainActivity.this.getBaseContext(),
                                 "Adding new recipe...",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this,RecipeActivity.class));
                     }
                 }
         );
@@ -81,6 +84,7 @@ public class MainActivity extends ActionBarActivity {
                     public void onClick(View v) {
                         Toast.makeText(MainActivity.this.getBaseContext(),
                                 "Adding new chef...",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this,ChefActivity.class));
                     }
                 }
         );

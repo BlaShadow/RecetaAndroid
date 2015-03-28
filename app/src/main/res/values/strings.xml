@@ -7,5 +7,6 @@
     <string name="title_activity_recipe">RecipeActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_chef">ChefActivity</string>
+    <string name="title_activity_show_data">ShowDataActivity</string>
 
 </resources>
