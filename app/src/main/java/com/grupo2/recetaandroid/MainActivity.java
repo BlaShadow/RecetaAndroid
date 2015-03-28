@@ -10,7 +10,6 @@ import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-
 public class MainActivity extends ActionBarActivity {
 
     private final static int SPLASH_TIMEOUT = 3000;
