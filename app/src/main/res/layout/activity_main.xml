@@ -21,7 +21,6 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:background="#ffeeeeee"
-            android:paddingEnd="@dimen/abc_button_inset_vertical_material"
             android:padding="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
 
         <ImageButton
@@ -35,7 +34,6 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:background="#ffeeeeee"
-            android:paddingEnd="@dimen/abc_button_inset_vertical_material"
             android:padding="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
 
         <ImageButton
@@ -62,7 +60,6 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:background="#ffeeeeee"
-            android:paddingEnd="@dimen/abc_button_inset_vertical_material"
             android:padding="@dimen/abc_action_bar_subtitle_bottom_margin_material" />
 
     </RelativeLayout>
