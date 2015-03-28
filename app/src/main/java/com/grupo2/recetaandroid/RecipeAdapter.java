@@ -43,7 +43,7 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
         Picasso.with(context)
                 .load(item.getUrlImage())
                 .placeholder(R.mipmap.ic_launcher)
-                .resize(50, 50)
+                .resize(100,100)
                 .centerCrop()
                 .into(image);
 

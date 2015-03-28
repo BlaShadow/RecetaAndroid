@@ -5,8 +5,9 @@
 
     <ImageView
 
-        android:layout_width="50dp"
-        android:layout_margin="20dp"
+        android:layout_width="100dp"
+        android:layout_margin="5dp"
+        android:src="@mipmap/chef_hat"
         android:layout_height="wrap_content"
         android:id="@+id/recipe_image"/>
 

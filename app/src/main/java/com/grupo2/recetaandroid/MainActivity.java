@@ -9,7 +9,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -43,10 +46,10 @@ public class MainActivity extends ActionBarActivity {
                 //Pink fluffy unicorns dancing on rainbows
             }
         }.start();
-
     }
 
     private void initializeButtons(){
+
         /*
         *   Método utilizado para inicializar los botones
          */
