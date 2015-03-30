@@ -42,7 +42,8 @@ public class ShowDataActivity extends ActionBarActivity {
 
         ArrayAdapter adapter = new ChefAdapter(this,R.layout.chef_item_list);
 
-        adapter.addAll(ChefDao.getInstance().getChefs());
+        for(Chef chef : ChefDao.getInstance().getChefs())
+            adapter.add(chef);
 
         chefListView.setAdapter(adapter);
     }

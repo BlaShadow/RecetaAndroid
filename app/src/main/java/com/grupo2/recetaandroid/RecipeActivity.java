@@ -29,7 +29,8 @@ public class RecipeActivity extends ActionBarActivity {
 
         ChefSpinerAdapter adapter = new ChefSpinerAdapter(this,R.layout.chef_spiner_item_list);
 
-        adapter.addAll(ChefDao.getInstance().getChefs());
+        for(Chef chef : ChefDao.getInstance().getChefs())
+            adapter.add(chef);
 
         chefRecipeSpn.setAdapter(adapter);
     }

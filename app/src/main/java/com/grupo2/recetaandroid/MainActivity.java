@@ -63,8 +63,6 @@ public class MainActivity extends ActionBarActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this.getBaseContext(),
-                                "Showing list...",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this,ShowDataActivity.class));
                     }
                 }
@@ -74,8 +72,6 @@ public class MainActivity extends ActionBarActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this.getBaseContext(),
-                                "Adding new recipe...",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this,RecipeActivity.class));
                     }
                 }
@@ -85,8 +81,6 @@ public class MainActivity extends ActionBarActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this.getBaseContext(),
-                                "Adding new chef...",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainActivity.this,ChefActivity.class));
                     }
                 }
