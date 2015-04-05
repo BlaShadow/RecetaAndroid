@@ -33,7 +33,7 @@ public class ChefActivity extends ActionBarActivity {
 
         nameChef.setText("");
 
-        message("Cref creado");
+        message("Chef creado");
 
         finish();
     }
