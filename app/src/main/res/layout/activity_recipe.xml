@@ -3,11 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Receta"
+        android:textSize="32sp"
+        android:gravity="center"/>
 
     <EditText
         android:layout_width="fill_parent"
         android:id="@+id/recipe_activity_name"
+        android:layout_margin="10dp"
         android:hint="Nombre Receta"
         android:layout_height="wrap_content" />
 
@@ -15,26 +24,45 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Url imagen"
+        android:layout_margin="10dp"
         android:id="@+id/recipe_activity_image_url"/>
 
     <Spinner
         android:id="@+id/recipe_activity_chef"
         android:layout_width="fill_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content" />
 
     <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/recipe_rating_bar"
+        android:layout_margin="10dp"
         android:layout_gravity="center_horizontal"
         android:stepSize="1.0" />
 
-    <Button
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_margin="15dp"
-        android:layout_height="wrap_content"
-        android:onClick="saveRecipe"
-        android:text="Crear receta"/>
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="salir"
+            android:text="Cancelar"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="saveRecipe"
+            android:text="Crear receta"/>
+        </LinearLayout>
+
 
 </LinearLayout>
 

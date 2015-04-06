@@ -74,4 +74,8 @@ public class RecipeActivity extends ActionBarActivity {
             message("Error creando receta");
         }
     }
+
+    public void salir(View btn){
+        finish();
+    }
 }
