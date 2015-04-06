@@ -9,6 +9,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="app"
@@ -20,7 +21,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,14 +30,20 @@
         </activity>
         <activity
             android:name=".RecipeActivity"
+
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_recipe" >
         </activity>
         <activity
             android:name=".ChefActivity"
+
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_chef" >
         </activity>
         <activity
             android:name=".ShowDataActivity"
+
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_show_data" >
         </activity>
 
