@@ -43,4 +43,8 @@ public class ChefActivity extends ActionBarActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    public void salir(View bnt){
+        finish();
+    }
+
 }
