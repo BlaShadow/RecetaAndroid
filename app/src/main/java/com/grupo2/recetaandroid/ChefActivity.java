@@ -40,8 +40,6 @@ public class ChefActivity extends ActionBarActivity {
             return;
         }
 
-        nameChef.getText().toString().
-
         Chef chef = new Chef();
         chef.setName(nameChef.getText().toString());
         chef.save();

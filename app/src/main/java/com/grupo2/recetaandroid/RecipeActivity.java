@@ -75,7 +75,7 @@ public class RecipeActivity extends ActionBarActivity {
 
         //Validate url format :)
         try{
-            URL tmpUrl = new URL();
+            URL tmpUrl = new URL(imageUrl.toString());
         }catch(MalformedURLException malformedURLException){
             message("Url invalida");
             return;
