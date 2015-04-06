@@ -11,6 +11,11 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class RecipeActivity extends ActionBarActivity {
 
@@ -51,10 +56,28 @@ public class RecipeActivity extends ActionBarActivity {
             return;
         }
 
+        Pattern exp = Pattern.compile("^[a-zA-Z0-9äöüÄÖÜ]*$");
+        Matcher matcher = exp.matcher(recipeName.toString());
+
+        //Invalid input
+        if (matcher.matches() == false)
+        {
+            message("El nombre contiene caracteres invalidos.");
+            return;
+        }
+
         Editable imageUrl = imageUrlTxt.getText();
 
         if(imageUrl == null || imageUrl.toString().isEmpty()){
             message("El campo imagen es requerido.");
+            return;
+        }
+
+        //Validate url format :)
+        try{
+            URL tmpUrl = new URL();
+        }catch(MalformedURLException malformedURLException){
+            message("Url invalida");
             return;
         }
 
