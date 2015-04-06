@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 
 public class MainActivity extends ActionBarActivity {
 
-    private final static int SPLASH_TIMEOUT = 3000;
+    private final static int SPLASH_TIMEOUT = 5000;
 
     private ImageButton listBtn = null;
     private ImageButton chefBtn = null;
