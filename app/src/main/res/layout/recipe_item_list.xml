@@ -17,7 +17,8 @@
         android:layout_width="wrap_content"
         android:orientation="vertical"
         android:layout_toRightOf="@+id/recipe_image"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:id="@+id/recipe_name"
@@ -31,6 +32,14 @@
             android:text="Chef Name"
             android:layout_height="wrap_content"
             android:id="@+id/recipe_chef_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:id="@+id/recipe_rating"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true" />
     </LinearLayout>
 
 </RelativeLayout>

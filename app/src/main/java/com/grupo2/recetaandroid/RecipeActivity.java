@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class RecipeActivity extends ActionBarActivity {
 
     private EditText recipeNameTxt;
     private EditText imageUrlTxt;
+    private RatingBar ratingBar;
     private Spinner chefRecipeSpn;
 
     @Override
@@ -26,6 +28,7 @@ public class RecipeActivity extends ActionBarActivity {
         recipeNameTxt = (EditText)findViewById(R.id.recipe_activity_name);
         chefRecipeSpn = (Spinner)findViewById(R.id.recipe_activity_chef);
         imageUrlTxt = (EditText)findViewById(R.id.recipe_activity_image_url);
+        ratingBar = (RatingBar)findViewById(R.id.recipe_rating_bar);
 
         ChefSpinerAdapter adapter = new ChefSpinerAdapter(this,R.layout.chef_spiner_item_list);
 
@@ -62,7 +65,7 @@ public class RecipeActivity extends ActionBarActivity {
             return;
         }
 
-        boolean result = RecipeDao.getInstance().createRecipe(itemChef,recipeName.toString(),imageUrl.toString(),10);
+        boolean result = RecipeDao.getInstance().createRecipe(itemChef,recipeName.toString(),imageUrl.toString(),(int)ratingBar.getRating());
 
         if(result){
             message("Receta Creada");

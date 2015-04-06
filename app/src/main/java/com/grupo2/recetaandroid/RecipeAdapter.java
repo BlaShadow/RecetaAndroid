@@ -33,10 +33,12 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
 
         TextView name = (TextView)rootView.findViewById(R.id.recipe_name);
         TextView chefName = (TextView)rootView.findViewById(R.id.recipe_chef_name);
+        TextView rating = (TextView)rootView.findViewById(R.id.recipe_rating);
         ImageView image = (ImageView)rootView.findViewById(R.id.recipe_image);
 
         name.setText(item.getName());
         chefName.setText(item.getChef().getName());
+        rating.setText("Rating: "+item.getRating());
 
         Log.i("Recipe Adapter", item.getUrlImage());
 
